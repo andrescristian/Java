@@ -8,6 +8,5 @@ public class Jogador {
 	public void adivinhar() {
 		numero = (int) (Math.random() * 10);
 		System.out.println("Estou pensando em " + numero);
-
 	}
 }
