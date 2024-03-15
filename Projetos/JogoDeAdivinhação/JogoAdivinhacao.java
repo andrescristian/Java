@@ -3,8 +3,7 @@ import java.util.Scanner;
 
 public class JogoAdivinhacao {
 	Scanner entrada = new Scanner(System.in);
-	
-	
+		
 	// Criando as 3 Variáveis de Instância (usando a Classe Jogador())
 	Jogador j1;
 	Jogador j2;
