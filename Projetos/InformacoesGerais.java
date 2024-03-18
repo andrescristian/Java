@@ -2,7 +2,6 @@ package cursoJava;
 import java.util.Scanner;
 
 public class InformacoesGerais {
-
 	public static void main(String[] args) {
 		// Tem-se um conjunto de dados contendo a altura e o sexo (masculino, feminino)
 		// de 10 pessoas. Fazer um algoritmo que calcule e escreva:
@@ -45,8 +44,6 @@ public class InformacoesGerais {
         System.out.println("A média de altura dos homens é " + mediaHomens + " m");
         System.out.println("O número de mulheres é " + qtMulheres);
 
-        entrada.close();
-		
+        entrada.close();		
 	}
-
 }
