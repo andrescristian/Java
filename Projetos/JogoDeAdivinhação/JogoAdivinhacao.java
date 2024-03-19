@@ -74,6 +74,6 @@ public class JogoAdivinhacao {
 				System.out.println("Tentem novamente...");
 				entrada.nextLine();
 			}
-		} //Fim do Loop
+		}
 	}
 }
