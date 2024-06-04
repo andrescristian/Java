@@ -1,0 +1,41 @@
+Aplicar o padrão MVC - Arquitetura de Software
+
+- View:     Interface Gráfica (HTML, CSS, Javascript). Página que o Usuário vai interagir
+- Controle: Coordena e controla o fluxo dos dados (Requisição e Resposta)
+- Modelo:   Faz a Manipulação dos Dados, PEDE E RECEBE dados do Banco de Dados. Tem 2 Classes:
+JavaBeans --> Responsável pela segurança dos dados (Encapsulamento)
+DAO	  --> Responsável pelo acesso ao Banco de Dados
+
+webapp	--> Pasta do Front-end
+WEB-INF/lib	--> Pasta do arquivo ".jar" que vai carregar o Driver JDBC
+
+
+Criando o Ambiente pro Projeto:
+1º Dynamic Web Project	--> Cria um novo projeto com Apache Tomcat
+	- Criar um nome (Agenda)
+	- Clicar na opção de criar o arquivo .XML
+
+2º Criar um Pacote (package) para as Camadas "Controller" e "Model"
+agenda
+	Java Resources
+		src/main/java (Botao direito do mouse)
+			New	-->	Package	-->  Nome:agenda
+
+3º Criar um Servlet no Pacote (package) "Controller"
+	Name Class: Controller	--> Next --> Tirar doPost
+
+4º Criar 2 Classes "DAO.java" e "JavaBeans.java" no Pacote(package) "Model"
+
+5º Criar arquivo html na pasta "webapp"
+Agenda
+	src --> main --> webapp (Botao direito do mouse)
+				New  --> create file HTML
+
+
+6º Criar pasta de Imagens e Booststrap
+webapp	--> folder --> img e bootstrap
+
+7º Criar arquivo style.css no "webapp"
+Agenda
+	src --> main --> webapp (Botão direito do mouse)
+				New --> create file CSS

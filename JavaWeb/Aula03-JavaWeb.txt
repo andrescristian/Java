@@ -1,0 +1,80 @@
+Estrutura : Orientação a Objetos
+Ex:
+	Jogador j1 = new Jogador();
+
+- "Jogador" é o nome Classe
+- j1 é a Variável de Referência criada a partir dessa Classe
+- "new" cria um Objeto do tipo Jogador
+
+j1.metodo1();	--> Chama o metodo1() através da Variável de Referência "j1"
+
+-- Modificadores de Acesso às Variáveis
+private	--> (Encapsulamento) Uma variável que pode ser acessada somente por métodos da própria classe
+public	--> Uma variável que pode ser acessada por qualquer outra classe é dita pública
+
+Ex: private String nome;
+
+- Encapsulamento criado na Classe "JavaBeans.java" (Só essa Classe pode acessar essas Variáveis)
+
+- A única forma de acessar as Variáveis Encapsuladas é criando Métodos que vão acessá-las. Para isso, clicar nas opções:
+Source
+	Generate Getters and Setters
+		(Selecionar todas as opções de Variáveis) --> Generate 
+
+//Criando Construtores para selecionar os Contatos no Banco de Dados
+	public JavaBeans() {
+		super();	
+	}
+	
+	public JavaBeans(String idcon, String nome, String fone, String email) {
+		super();
+		this.idcon = idcon;
+		this.nome = nome;
+		this.fone = fone;
+		this.email = email;
+	}
+
+
+Source
+	Generate Constructors from SuperClass
+		Generate
+
+Source
+	Generate Constructor using Fields
+		Generate
+
+
+--> JDBC
+- Pegar Driver do Banco de Dados
+"Drive Manager"
+
+Extrair arquivo.zip mysql
+	Jogar o Driver na pasta "lib" do eclipse
+
+--> Configurar a Classe DAO para dar o Acesso/Conexão ao Banco de Dados
+
+ -> "Connection" faz abertura e fechamento de Dados
+- Importar essa Classe no arquivo DAO.java, para a conexão com o Banco de Dados:
+	import java.sql.Connection;
+
+--> Tratamento de exceções
+try	--> Faz conexão com o Banco
+catch	--> Qualquer coisa que der errado no código, ele vai mostrar (ex:Se o caminho da Classe do Driver estiver errado e não for encontrado, ele vai dar essa exceção "catch")
+
+Class.forName(driver);		--> Vai carregar o Driver (que eu baixei) do MySQL dentro da minha aplicação Java
+- Esse driver está armazenado na Variável Encapsulada driver:
+	private String driver = "com.mysql.cj.jdbc.Driver";
+
+
+con = DriverManager.getConnection(url, user, password);
+
+DriverManager	--> Vai carregar o Driver que eu baixei
+getConnection	--> Vai receber as Strings de Conexão (url, user, password). Pertence à Classe DriverManager 
+
+
+
+No geral, o JDBC tem 4 Classes Principais:
+1º Connection		--> Abre e Fecha a Conexão com o Banco de Dados
+2º PreparedStatement	--> Executa instruções SQL dentro do Java
+3º DriverManager	--> Ajuda no carregamento do Driver que eu baixei
+4º ResultSet		--> Retorna informações do Banco de Dados pro Java

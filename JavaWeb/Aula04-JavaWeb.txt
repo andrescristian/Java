@@ -1,0 +1,7 @@
+Realização do teste de conexão (Correto)
+- Quando estiver escrito com.mysql.Connection
+
+
+- Quando clicar o botao Acessar, fazer a  requisição para o arquivo .jsp
+
+Criar novo arquivo .jsp na pasta "webapp"

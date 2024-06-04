@@ -1,0 +1,20 @@
+--> PreparedStatement
+- Executa instruções SQL no Java, replicando-os no servidor MySQL
+- Faz o CRUD (Create/Criar, Read/Ler, Update/Atualizar, Delete/Excluir)
+
+São 10 Passos
+- Hoje vamos fazer 3 deles
+
+Passo 1	- Criar um arquivo novo.html
+
+Preencher os dados do Formulário
+- Colocar 2 campos obrigatórios
+
+Passo 2 - Criar o arquivo de validação
+
+Passo 3 - Retornar os Dados
+
+Passo 4 - Pega os dados do Formulário que serão enviados para a Camada Controller,
+
+action="insert" dentro do <form>		--> novo.html
+@WebServlet(urlPatterns = {"/main", "/insert"})	--> Controller.java

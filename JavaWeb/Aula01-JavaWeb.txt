@@ -1,0 +1,46 @@
+Java Web
+Requisição HTTP ou HTTPS entre Cliente e Servidor Java
+- O Usuário faz Requisição (PEDIDO) pelo Protocolo HTTP/HTTPS pro Servidor
+	- HTTP faz a troca de dados na Web e é um Protocolo cliente-servidor
+- O Servidor vai ver essa Requisição e vai mandar pro Container, que vai ao Servlet, que por sua vez faz toda a leitura e devolve uma Resposta (na Página Web)
+	Usuário (Página Web) --> Servidor --> Container --> Servlet
+Servlet   --> Lê o código JAVA (relacionado com o Banco de Dados) 
+Navegador --> Lê o Front-end
+
+Extensão .jsp	--> Java Server Page
+- Junta o HTML com código Java
+
+Servlet
+-> Arquivo.xml
+- Ele vai procurando arquivos em ordem (do 1º até o último...)
+
+Lupa de pesquisa do Eclipse:
+Dynamic Web Project	
+Web browser - Navegador
+
+doPost 	--> Traz requisição
+doGet	--> É a Resposta (response - Usamos este na aula)
+	doGet vai criar 2 Objetos: request e response
+
+*Observação: request  = Pedir, Solicitação, Requisição
+	     response = Resposta
+
+--> Sintaxe dos Elementos JSP
+<%@ %>	--> Diretiva
+	<%@ page import = "java.util.Date" %>
+
+<%= %>	--> Expressão (Não precisa usar o Ponto e Vírgula)
+	<%= new Date()%>
+
+<%= %> --> Mexer no valor da Variável
+<%= contador++ %>
+
+<%! %> --> Para declarar Variaveis
+	<%!String nome = "Andres"; %>
+
+<%-- --%>	--> Faz comentários
+
+--> Atalhos do Eclipse
+Alt + Shift + Y		--> Faz quebra de linha
+Ctrl + Shift + F	--> Alinha o código
+Ctrl + Shift + O	--> Importa um Pacote (ponteiro do mouse deve ficar encima do código)
