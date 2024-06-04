@@ -1,0 +1,31 @@
+Aula 23/04/2024
+------------------ Relatório em PDF ---------------------
+- Vamos criar um arquivo de relatório em PDF
+-- Criar um botão para o Relatório
+
+--> Passo 1
+- O Servlet vai criar o documento que vai reutilizar o método listarContato()
+-- Vai do Controller/Servlet --> DAO --> MySQL --> DAO --> JavaBeans --> Controller/Servlet vai criar o documento em PDF (usando uma biblioteca externa grátis (código aberto)
+
+--- O link da biblioteca é a seguinte:	https://github.com/itext/itextpdf/releases
+
+Baixar: 	itextpdf-5.5.13.3.zip (3º Opção da Opção "Assets")
+Extrair tudo, e selecionar o arquivo JAR:	itextpdf-5.5.13.3	(Biblioteca pra criar o arquivo em PDF)
+e jogar esse arquivo JAR na pasta "lib" do Projeto
+
+-> Agenda.jsp
+-- Criar o botão Relatório no "agenda.jsp"
+<a href="report" class="btn btn-primary btn-lg mb-3">	<!-- report é pra Requisição --> 
+	<img src="img/contato.png" alt="Relatório em PDF"> Relatório
+</a>
+
+-> Controller.java
+-- Criar um novo caminho "/report"
+	@WebServlet(urlPatterns = {"/main", "/insert", "/select", "/update", "/delete", "/report"})
+
+- E criar uma nova rota no Método Principal do Servlet:
+gerarRelatorio(request, response);
+
+- E criar um novo Método pra requisição /report
+
+Ao clicar no botão, abrir o arquivo em "Salvar", "Abrir com: Internet Explorer" 

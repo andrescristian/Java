@@ -1,0 +1,13 @@
+Realização da Atividade de Cadastro de Produtos
+Explicação sobre o Trabalho
+Tema do Trabalho: Gestao de Estoque
+
+Escolher 2 ODS no site (Objetivo de Desenvolvimento Sustentavel) e dizer o porque que se encaixa no nosso trabalho
+- 1 página apenas sobres essas ODS (Se for onepage, criar um link para acessar essa página)
+
+- Liberar o IP para ser acessado no celular
+
+-Criar Servidor no PC
+-Criar site
+-Criar sistema desktop
+- Fazer PowerPoint explicando sobre o trabalho

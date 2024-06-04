@@ -1,0 +1,23 @@
+*Relembrando:
+DAO.java(Model)	--> Vai PEDIR e RECEBER Dados do Banco, além de se conectar com ele
+- Depois de receber esses Dados do Banco, esses mesmos dados vão pra Classe "JavaBeans.java"
+- depois do "JavaBeans.java", esses dados vão ir pra Camada Controller,
+- da Camada Controller vai pra Camada View agenda.jsp, mostrando todos os Dados
+
+!!!HOJE!!!
+- Trazer os Dados do Banco e coloca-los no arquivo "agenda.jsp"
+
+- Vamos usar um Array/Vetor pra obter vários valores. Pra armazenar varios contatos pra buscar
+
+
+ResultSet	--> Armazena o retorno do Banco MySQL
+
+Passo 4 --> Vai trazer do Banco de armazenar dentro da Variavel "rs"
+
+Passo 6 --> Mostrar dados da página .jsp
+
+Passo  7 --> Sai da Controller e joga pro agenda.jsp
+
+Importamos no agenda.jsp
+<%@ page import="model.JavaBeans" %>
+<%@ page import="java.util.ArrayList" %>

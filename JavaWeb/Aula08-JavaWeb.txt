@@ -1,0 +1,85 @@
+Aula JavaWeb 02/04
+Adicionar no agenda.jsp:
+- Uma Tabela do Bootstrap
+- Um Botao
+
+UPDATE
+Passo 1 - 
+Botao usado pra editar os dados que ao pressionar, vai encaminhar uma requisição ao Servlet
+- Criar uma requisição  "/select" no Controller
+- Servlet vai encaminhar pro Model, com Id que será editado, vai encaminhar pro JavaBeans
+
+Usar select?  no link <a> no agenda.jsp
+
+
+Passo 2
+Servlet encaminha essa requisição pra camada Model
+Setar a Variável JavaBeans
+
+Passo 3
+- Criar um Método responsável pela seleção de um contato específico
+
+Criar um Método sem retorno (void) do UPDATE no DAO.java
+
+Passo 5
+Pega o ID do contato, que esta na guardado na variavel JavaBeans
+Do JavaBeans pra Classe DAO
+
+Passo 6
+Executa o comando SQL do Java pro Banco
+
+
+Passo 7
+Banco retorna as informações(contato específico) que eu Pedi
+
+Passo 8
+- Pegar dados, e armazenar temporariamente no JavaBeans
+
+Passo 9 
+- Receber Dados
+Teste de recebimento
+
+Passo 10
+- do Servlet, ele vai jogar os dados pro novo arquivo de recebimento de dados (editar.jsp)
+
+__________________________________________
+Aula JavaWeb 16/04 - Continuação do UPDATE
+
+Setar os Atributos do formulário  com o conteúdo do JavaBeans
+
+//Encaminhar (despachar) ao documento editar.jsp
+
+- O Controller encaminha os dados do formulário pro arquivo editar.jsp
+- Ou seja, vai mostrar os dados do formulário direto nos campos do editar.jsp 
+
+
+Passo 13 UPDATE
+- Começar a salvar os dados alterados/editados no arquivo editar.jsp
+- O comando SQL usado é:
+	UPDATE contatos SET nome =?, fone=?,email=? WHERE idcon=?
+
+--> Controller.java
+- Digitar um novo urlPatterns /update dentro das chaves
+
+- E encaminhar o /update na estrutura condicional (rotas) do Método principal do Servlet
+- Criar um Método para a Requisição do UPDATE
+Ex:	protected void editarContato (HttpServletRequest request, HttpServletResponse response) throws IOException
+
+Passo 15 UPDATE
+- Jogar dados do Servlet para o DAO.java
+
+Pra isso, vamos:
+- Criar um Método alterarContato() no DAO.java, para editar os contatos no editar.jsp
+- E usar o seguinte código no Controller.java:
+	dao.alterarContato(contato); //Relembrar que o contato pega Métodos do JavaBeans
+
+- e depois de editar e salvar os dados, vamos fazer voltar pra página agenda.jsp (main):
+	response.sendRedirect("main");
+
+
+Relembrar o uso de Controller.java:
+Tecnologias usadas no projeto
+- Apache TomCat
+- Servlet
+- Método doGet (HTTP request response)
+

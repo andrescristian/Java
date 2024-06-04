@@ -1,0 +1,41 @@
+Aula 18/04 JavaWeb
+
+CRUD DELETE
+--> Objetivo: Criar o botão Excluir
+- Quando o botão for clicado, ele vai buscar um ID
+
+Mexer no agenda.jsp, criar confirmador.js
+
+Criar um confirmador.js para confirmar os dados que serão excluidos 
+
+Controller --> JavaBeans --> DAO 
+
+- Vai armazenar os dados no JavaBeans
+- do DAO.java entra em contato com o banco e exclui, retornando 
+pro Servlet, e depois para o agenda.jsp
+
+Passo 1 DELETE:
+1º Criar um botão Excluir no agenda.jsp
+2º Criar um arquivo confirmador.js na pasta "scripts"
+	Linkar o arquivo no agenda.jsp e linkar tambem no botão da seguinte forma
+	<a	href="javascript:confirmar(<%= lista.get(i).getIdcon() %>)
+	</a>
+
+Passo 2 DELETE:
+- JS faz requisição ao Servlet
+window.location.href = "delete?idcon=" = idcon	//Encaminhar a requisição ao Servlet
+
+Passo 3 DELETE
+- Setar as Variáveis pro JavaBeans
+- Do Controller.java indo pro JavaBeans.java
+3º Adicionar um novo caminho no urlPatterns /delete
+4º Adicionar no Método Principal do Servlet (nas rotas)
+5º Criar um Método removerContato() no Controller.java
+
+Passo 4 DELETE
+- Depois de armazenar a id no contato, guardar Variável na Classe JavaBeans 
+6º Criar um Método sem retorno no DAO.java deletarContato()
+
+Passo 5
+Passo 6
+- Retornar a pagina agenda.jsp depois da exclusão
