@@ -1,0 +1,54 @@
+Inserir dados no Banco de dados
+
+Passo 6 - fazer do JavaBeans ir para o DAO, e do DAO para o Banco de Dados
+- armazena os dados temporariamente no JavaBeans 
+- a camada Controller vai receber os novos dados do Formulário e vai encaminhar para Model
+
+-- Para fazer o CRUD CREATE no Java (DAO), vamos usar o comando:
+
+	INSERT INTO contatos (nome, fone, email) VALUES ('Andres', '123', 'cris@email.com');
+
+- Dentro da Classe DAO.java:
+/*CRUD CREATE - Criar Método pra pegar os Dados do JavaBeans. Vai ser invocado na Classe Controller.java*/
+	public void inserirContato(JavaBeans contatos) {
+		String create = "insert into contatos(nome, fone, email) values (?,?,?)";
+	}
+
+
+try {
+			//Abrir conexão com o Banco
+			Connection con = conectar();
+			PreparedStatement pst = con.prepareStatement(create);
+		} catch (Exception e) {
+			System.out.println(e);
+		}
+- Vai abrir conexão com o Banco
+
+	PreparedStatement pst	--> pst Vai usar a conexão com o banco pra executar a variavel "create"
+-- A variável "create" vai Inserir Dados no Banco de Dados com um Comando SQL dentro do Java
+
+Passo 7 - o DAO Entra em contato com o JAVABEANS para pegar o que esta guardado na variavel input (executeUpdate();) e trazendo novamente para o DAO
+
+Passo 8
+
+Passo 9 - mandar dados pro banco
+
+Passo 10 - J
+
+
+Dentro do arquivo "Controller.java"
+//Quando a requisição for a "insert", ele vai invocar esse método
+	protected void novoContato(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		//Teste de recebimento do Formulário
+		/*System.out.println(request.getParameter("nome"));
+		System.out.println(request.getParameter("fone"));
+		System.out.println(request.getParameter("email"));*/
+		
+		contato.setNome(request.getParameter("nome"));
+		contato.setFone(request.getParameter("fone"));
+		contato.setEmail(request.getParameter("email"));
+		
+		
+		//Invocando o Método "inserirContato()" da Classe DAO.java
+		dao.inserirContato(contato);
+	}
